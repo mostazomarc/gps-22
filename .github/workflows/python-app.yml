@@ -3,10 +3,10 @@ name: Python CI
 on:
   push:
     branches:
-      - main  # Canvia-ho segons el nom de la teva branca principal
+      - master  # Canvia-ho segons el nom de la teva branca principal
   pull_request:
     branches:
-      - main  # Canvia-ho segons el nom de la teva branca principal
+      - master  # Canvia-ho segons el nom de la teva branca principal
 
 jobs:
   build:
