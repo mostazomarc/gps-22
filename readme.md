@@ -1,4 +1,4 @@
-# Pràctica d'Integració Contínua - GPS-22
+# Pràctica d'Integració Contínua - FIB-UPC - GPS-22
 
 Benvinguts al repositori de la pràctica d'integració contínua del grup GPS-22. Aquest projecte té com a objectiu demostrar el funcionament de la integració contínua utilitzant GitHub Actions.
 
