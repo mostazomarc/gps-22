@@ -1,0 +1,41 @@
+name: Python CI
+
+on:
+  push:
+    branches:
+      - main  # Canvia-ho segons el nom de la teva branca principal
+  pull_request:
+    branches:
+      - main  # Canvia-ho segons el nom de la teva branca principal
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest  # Pots canviar-ho segons les teves necessitats
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.8  # Pots canviar-ho segons la versió de Python que necessitis
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Run static code analysis (pylint)
+      run: |
+        pylint main.py
+
+    - name: Run tests
+      run: |
+        pytest
+
+    - name: Calculate test coverage
+      run: |
+        coverage run -m pytest
+        coverage report -m
