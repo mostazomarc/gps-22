@@ -37,5 +37,5 @@ jobs:
 
     - name: Calculate test coverage
       run: |
-        coverage run -m test.py
+        coverage run test.py
         coverage report -m
